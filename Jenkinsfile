@@ -15,7 +15,7 @@ pipeline {
                 sh "sudo -S yum install httpd -y"
                 sh "sudo systemctl start httpd"
                 sh "sudo systemctl enable httpd"
-                sh "sudo cd jenkins"
+                sh "sudo cd Jenkins"
                 sh "sudo cp index.html /var/www/html/"
                 sh "sudo chmod 777 /var/www/html/index.html"
             }
