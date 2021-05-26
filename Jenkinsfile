@@ -11,6 +11,7 @@ pipeline {
             stage('Deploy start'){
             steps{
                 echo "Start"
+                sh "git clone https://github.com/alexandrauricec/Jenkins.git"
                 sh "sudo -S yum install httpd -y"
                 sh "sudo systemctl start httpd"
                 sh "sudo systemctl enable httpd"
